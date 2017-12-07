@@ -1,0 +1,24 @@
+#include "lib_acl.h"
+
+
+
+/*
+ *main enter
+ */
+ 
+int main(){
+    
+   ACL_ARGV *argv=acl_argv_alloc(20);
+
+   acl_argv_add(argv,"xxx","jackwu","12345");
+    int size=acl_argv_size(argv);
+    int i=0;
+  printf(">>>>>>>>>>>>>>>>size=%d\r\n",size);   
+  printf(">>>>>>>>>>>>>>>>size=%d\r\n",size);   
+ 	
+ 	
+    for(i=0;i<size;i++){
+    printf("%s",acl_argv_index(argv,i));
+}
+	return 0;
+}

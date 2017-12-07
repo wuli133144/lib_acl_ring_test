@@ -1,0 +1,1 @@
+/usr/bin/cc      CMakeFiles/fifo.dir/lib_acl_ring_http_cache.c.o  -o fifo  -L/boot/opts/acl/lib_acl/lib -rdynamic -Wl,-Bstatic -l_acl -Wl,-Bdynamic -lpthread -Wl,-rpath,/boot/opts/acl/lib_acl/lib 

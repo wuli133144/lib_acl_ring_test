@@ -1,0 +1,68 @@
+//#include "acl_lib.h"
+
+include "lib_acl.h"
+#include <getopt.h>
+#define  MAX_BUFLINE     1024
+
+//private 
+static void usage(){
+	 
+	 //printf("fsdaf
+	 //
+	 //");
+	 printf("tag l m h :\r\n" \
+	        " l:logfile\r\n"  \
+			"h:helper\r\n" \
+			"m:function\r\n"
+	 );
+	
+	return;
+}
+
+int main(int argc,const char *argv[]){
+ 
+ ACL_RING header,item;
+ 
+ acl_ring_init(&header);
+ 
+ 
+ 
+ acl_ring_append(&header,&item);
+ //acl_ring_append(&header,&item);
+ //acl_ring_append(&header,&item);
+ 
+ int ch;
+ char buf[MAX_BUFLINE];
+ bzero(buf,strlen(buf));
+ while((ch=getopt(argc,argv,"h:l:m"))>0){
+	 
+	 case 'h':{
+		 usage();
+		 break;
+	 }
+	 case 'l':{
+		 snprintf(buf,strlen(buf),"%s",optarg);
+		 break;
+	 }
+	 case 'm':{
+		 acl_ring_append(&header,&item);
+		 break;
+		 
+	 }
+	 default:{
+		 
+		 break;
+	 }
+	 
+	 
+ }
+  
+ 
+
+ 
+ int sz=acl_ring_size(&header);
+ printf("ring buffer size=%d",sz);
+  
+ return 0;
+}
+
